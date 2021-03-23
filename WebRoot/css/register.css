@@ -1,0 +1,120 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+	width: 100%;
+    max-width: 750px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+#back{
+	width:20px;
+	height:20px;
+	border-top:3px #468edf solid;
+	border-left:3px #468edf solid;
+	opacity:1;
+	position: relative;
+	top:32px;
+	left:30px;
+	z-index: 999;
+	transform: rotate(-45deg);
+	animation: btn_fresh 1.2s infinite linear;
+}
+#back:hover{
+	opacity:0.5;
+	cursor: pointer;
+	transform: scale(1.5) rotate(-45deg);
+}
+@keyframes btn_fresh {
+     from { transform:rotate(-45deg) scale(0.1);
+     		opacity:0.3}
+     to {
+         transform:rotate(-45deg) scale(1);
+         transition: all .2s;
+         opacity:0.9;
+     }
+}
+h2{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-top: 25%;
+}
+form{
+	text-align: center;
+	margin-top: 5%;
+}
+input[type='text'],input[type='password'],input[type='number'],input[type='email'],input[type='submit']{
+	width: 80%;
+	height: 45px;
+	margin-top: 5%;
+	border: none;
+	border-bottom: 1px solid #808080;
+	line-height: 45px;
+	border-radius: 0px;
+}
+input:focus{
+	outline:none;
+	border-bottom: 1px solid #3385ff;
+}
+input[type='submit']{
+	border: none;
+	background: #3385ff;
+	border-radius: 20px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+	-webkit-appearance: none; 
+}
+input[type='submit']:hover{
+	opacity:0.8;
+}
+#c1{
+	width:20%;
+	border-radius:50%;
+	overflow:hidden;
+	display: none;
+	margin-top: 35%;
+	transform-style:preserve-3d;
+}
+#tip{
+	color:red;
+	text-align:left;
+	display:none;
+}
+@media screen and (min-width:800px){
+	h2{
+		margin-top: 10%;
+		font-size: 40px;
+	}
+	form{
+		margin-top: 2%;
+	}
+	#c1{
+		margin-top: 9%;
+	}
+}
+@media screen and (max-width:700px) and (min-height: 800px){
+	h2{
+		margin-top: 44%;
+	}
+}
+.child{
+	width: 100%;
+	margin-top: 2%;
+}
+a{
+	font-size: 14px;
+	color: #3385ff;
+	text-decoration:none;
+	text-align: center;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

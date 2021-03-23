@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>个人中心</title>
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link rel="icon" href="images/logo-s.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="formwork/bootstrap.min.css">
+	<script src="formwork/jquery.min.js"></script>
+	<script src="formwork/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+	<script src="formwork/fastclick.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/usermsg.css">
+</head>
+<body>
+<div class="parent">
+	<header class="title">
+		<h3>个人中心</h3>
+	</header>
+	<form>
+		<div id="div_base"><span>基本信息</span></div>
+		<div id="div_username"><span>用户名</span><span id="username"></span></div>
+		<div id="div_num"><span>账号绑定</span></div>
+		<div id="div_email"><span>邮箱</span><span id="email"></span></div>
+		<div id="div_phone"><span>手机号</span><span id="phone"></span></div>
+		<div id="div_safe"><span>安全设置</span></div>
+		<div id="div_reset"><span id="resetpwd">修改密码</span></div>
+		<div id="about"><span id="aboutus" onclick="showus()">关于我们</span></div>
+		<input type="button" value="退出登录" id="btn" onclick="logout()"/></br>
+	</form>
+	<div class="win">
+		<div class="box">
+			<div class="text">修改密码</div>
+			<input type="password" placeholder="请输入新密码" id="password"/>
+			<input type="password" placeholder="请输入确认密码" id="repassword"/>
+			<p id="tip">两次输入密码不一致</p> 
+			<div class="btn">
+				<a href="#" class="cancel">取消</a>
+				<a href="#" class="submit">确定</a>
+			</div>
+		</div>
+	</div>
+	<div id="cc">
+			<img id="c1" src="images/logo-l.png" >
+			<p id="tip1">梦丶随心飞&nbsp;&nbsp;&nbsp;&nbsp;版权所有</p>
+			<p>Copyright © 2019 DreamFly</p>
+			<p>.All Rights Reserved.</p>
+	</div>
+	<div id="footer">
+	<div id="home" onclick="home()"><img src="images/home01.png" id="img_home"/><p id="p_home">首页</p></div>
+	<div id="find" onclick="find()"><img src="images/find01.png" id="img_find"/><p id="p_find">发现</p></div>
+	<div id="car" onclick="car()"><img src="images/car01.png" id="img_car"/><p id="p_car">购物车</p></div>
+	<div id="order" onclick="orderd()"><img src="images/order01.png" id="img_order"/><p id="p_order">订单</p></div>
+	<div id="me"><img src="images/me02.png" id="img_me"/><p id="p_me">我的</p></div>
+	</div>
+  </div>
+<script type="text/javascript" src="js/usermsg.js"></script>
+</body>
+</html>

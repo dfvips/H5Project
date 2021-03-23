@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>购物车</title>
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link rel="icon" href="images/logo-s.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="formwork/bootstrap.min.css">
+	<script src="formwork/jquery.min.js"></script>
+	<script src="formwork/bootstrap.min.js"></script>
+	<script src="formwork/fastclick.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/car.css">
+</head>
+<body>
+<div class="parent">
+	<header class="title">
+		<h3>购物车</h3>
+	</header>
+	<div id="cc">
+			<img id="c1" src="images/logo-l.png" >
+			<p id="tip1">下单成功</p>
+	</div>
+  	<div id="content">
+	</div>
+	<div id="clear" >
+		<p onclick="pay()">下单</p>
+		<p onclick="clearcar()">清空购物车</p>
+		<p id="price"></p>
+	</div>
+	<div id="footer">
+	<div id="home" onclick="home()"><img src="images/home01.png" id="img_home"/><p id="p_home">首页</p></div>
+	<div id="find" onclick="find()"><img src="images/find01.png" id="img_find"/><p id="p_find">发现</p></div>
+	<div id="car"><img src="images/car02.png" id="img_car"/><p id="p_car">购物车</p></div>
+	<div id="order" onclick="orderd()"><img src="images/order01.png" id="img_order"/><p id="p_order">订单</p></div>
+	<div id="me" onclick="usermsg()" ><img src="images/me01.png" id="img_me"/><p id="p_me">我的</p></div>
+	</div>
+  </div>
+<script type="text/javascript" src="js/car.js"></script>
+</body>
+</html>

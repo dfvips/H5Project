@@ -1,0 +1,91 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+	width: 100%;
+    max-width: 750px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+h2{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-top: 35%;
+}
+form{
+	text-align: center;
+	margin-top: 15%;
+}
+input[type='text'],input[type='password'],input[type='button']{
+	width: 80%;
+	height: 45px;
+	margin-top: 5%;
+	border: none;
+	border-bottom: 1px solid #808080;
+	line-height: 45px;
+	border-radius: 0px;
+}
+input:focus{
+	outline:none;
+	border-bottom: 1px solid #3385ff;
+}
+input[type='button']{
+	border: none;
+	background: #3385ff;
+	border-radius: 20px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+	-webkit-appearance: none; 
+}
+input[type='button']:hover{
+	opacity:0.8;
+}
+.child{
+	width: 100%;
+	padding-left: 11%;
+	padding-right: 11%;
+}
+a{
+	margin-top: 5%;
+	font-size: 14px;
+	color: #666666;
+	text-decoration:none;
+}
+#register{
+	float: left;
+}
+#forget{
+	float: right;
+}
+#c1{
+	width:20%;
+	border-radius:50%;
+	overflow:hidden;
+	display: none;
+	margin-top: 35%;
+}
+#tip{
+	color:red;
+	text-align:left;
+	display:none;
+}
+a:hover{
+	opacity: 0.6;
+}
+@media screen and (min-width:800px){
+	h2{
+		margin-top: 20%;
+	}
+	#c1{
+		margin-top: 5%;
+	}
+}
+@media screen and (max-width:700px) and (min-height: 700px){
+	h2{
+		margin-top: 48%;
+	}
+}

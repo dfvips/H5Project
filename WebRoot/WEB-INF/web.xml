@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>H5Project</display-name>
+  <servlet>
+    <servlet-name>FoodServlet</servlet-name>
+    <servlet-class>Servlet.FoodServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowmsgServlet</servlet-name>
+    <servlet-class>Servlet.ShowmsgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddToCar</servlet-name>
+    <servlet-class>Servlet.AddToCar</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowCar</servlet-name>
+    <servlet-class>Servlet.ShowCar</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>Servlet.Register</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Findpwd</servlet-name>
+    <servlet-class>Servlet.Findpwd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCode</servlet-name>
+    <servlet-class>Servlet.GetCode</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AlterPwd</servlet-name>
+    <servlet-class>Servlet.AlterPwd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReceiveOrder</servlet-name>
+    <servlet-class>Servlet.ReceiveOrder</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>FoodServlet</servlet-name>
+    <url-pattern>/FoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowmsgServlet</servlet-name>
+    <url-pattern>/ShowmsgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddToCar</servlet-name>
+    <url-pattern>/AddToCar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowCar</servlet-name>
+    <url-pattern>/ShowCar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Findpwd</servlet-name>
+    <url-pattern>/Findpwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCode</servlet-name>
+    <url-pattern>/GetCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AlterPwd</servlet-name>
+    <url-pattern>/AlterPwd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReceiveOrder</servlet-name>
+    <url-pattern>/ReceiveOrder</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>main.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

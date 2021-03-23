@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link rel="icon" href="images/logo-s.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script src="formwork/jquery.min.js"></script>
+	<script src="formwork/fastclick.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+</head>
+<body>
+<div class="parent">
+	<h2>欢迎登录</h2>
+	<form>
+		<input type="text" placeholder="请输入用户名/邮箱/手机" name="username" id="username" required /></br>
+		<input type="password" placeholder="请输入密码" name="password" id="password" required /></br>
+		
+		<div id="cc">
+			<img id="c1" src="images/logo-l.png" ></br>
+			<p id="tip"></p>
+		</div>
+		<input type="button" value="登录" id="btn" onclick="login()"/></br>
+		<div class="child">
+			<a href="register.html" id="register">注册</a>
+			<a href="forget.html" id="forget">忘记密码？</a>
+		</div>
+	</form>
+</div>
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>
