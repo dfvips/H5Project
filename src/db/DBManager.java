@@ -24,10 +24,10 @@ public class DBManager {
         try {
           
            
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String url="jdbc:sqlserver://localhost:1433;DatabaseName=Food";
-            String name="aaa";
-            String mima="aaa";
+            Class.forName("com.mysql.jdbc.Driver");
+            String url="jdbc:mysql://127.0.0.1:3306/Food?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&amp;failOverReadOnly=false";
+            String name="xxxxxx";
+            String mima="xxxxxx";
             con=DriverManager.getConnection(url, name, mima);
             state = con.createStatement();
         } catch (ClassNotFoundException ex) {

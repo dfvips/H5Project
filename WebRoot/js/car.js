@@ -316,8 +316,9 @@ function pay(){
 			foodlist+='{"food_name":"'+name+'","food_num":'+num+',"food_price":"'+price+'","food_img":"'+img+'"}';
 		}
 	}
+	var userid = 0;
     if (typeof(Storage) !== "undefined") {
-    	var userid=localStorage.getItem("userid");
+    	userid=localStorage.getItem("userid");
 		var username=localStorage.getItem("username");
     	var email=localStorage.getItem("email");
     	var phone=localStorage.getItem("phone");
@@ -326,9 +327,6 @@ function pay(){
 		alert("您的浏览器不支持localStorage");
 	}
     console.log(foodlist);
-    var jsonStr = JSON.stringify(foodlist);
-    jsonStr = jsonStr.replace(/\"/g, "'");
-    jsonStr = "\"" + jsonStr + "\"";
     xmlhttp=new XMLHttpRequest();
 	if (window.XMLHttpRequest){
 	  // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -339,7 +337,7 @@ function pay(){
 	  }
 	  xmlhttp.open("POST","ReceiveOrder",true);
 	  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	  xmlhttp.send("jsonStr="+jsonStr);
+	  xmlhttp.send("jsonStr="+foodlist+"&uid="+userid);
 	  clearAll();
 	  var i=0;
 	  $(".title").css("display","none");

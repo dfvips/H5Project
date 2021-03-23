@@ -3,6 +3,11 @@ package service;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import db.DBManager;
 import net.sf.json.JSONArray;
@@ -102,7 +107,7 @@ public class Service {
             ResultSet rs1=null;
             String sql1="select * from  usermsg  where username='"+username+"' and useremail='"+email+"'";
             try {
-				rs1=s1.executeQuery(sql1);
+				
 				if(rs1.next()) {
 							try {
 								DBManager sq = new DBManager();
@@ -144,4 +149,43 @@ public class Service {
 	        result.element("data", jsonArray);  
 	        return result;  
 	    } 
+		
+		public JsonArray findorder(String u_id) {
+			// TODO Auto-generated method stub
+			DBManager sq1=new DBManager();
+		  	Statement s=sq1.getState();
+            ResultSet rs=null;
+            String sql="select orderlist from  foodorder  where u_id="+u_id;
+            JsonArray array = new JsonArray();
+            try {
+				rs = s.executeQuery(sql);
+				while (rs.next()) {
+					JsonObject object = new JsonObject();
+					String o = rs.getString("orderlist");
+					object.add("json", new JsonParser().parse(o));
+					array.add(object);
+				}
+				return array;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+	            return null;
+			} 
+		}
+		
+		public boolean saveorder(String uid, String order) {
+			// TODO Auto-generated method stub
+			DBManager sq=new DBManager();
+			Statement s = sq.getState();
+			String sql = "insert into foodorder(u_id,orderlist) values('"
+					+ uid + "'," + "'" + order + "')";
+			try {
+				s.execute(sql);
+				return true;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return false;
+			}
+		}
 }

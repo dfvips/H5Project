@@ -22,9 +22,15 @@ $(document).ready(function() {
 		// IE6, IE5 浏览器执行代码
 		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
+	var userid=0;
+    if (typeof(Storage) !== "undefined") {
+    	userid=localStorage.getItem("userid");
+	}else{
+		alert("您的浏览器不支持localStorage");
+	}
 	xmlhttp.open("POST", "ReceiveOrder", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send("getorder=" + "true");
+	xmlhttp.send("getorder=true&uid="+userid);
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			var result = xmlhttp.responseText;
